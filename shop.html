@@ -1,0 +1,280 @@
+<?php
+    session_start();
+    if (!isset($_SESSION["txtusername"])){
+        header('location:login.php');
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="icon" href="Assets/icons/icon.png">
+
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/powerbtn.css">
+    <!-- font icons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- js link -->
+    <script type="text/javascript" src="JS/index.js"></script>
+
+    <link rel="stylesheet" href="CSS/shop.css">
+</head>
+
+<body>
+    <div class="main-outer">
+        <div class="main-inner">
+
+            <div class="navigation-bar">
+                <ul class="nav-tabs">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="login.html">Login</a></li>
+
+
+                </ul>
+
+                <ul class="social-tab-icons">
+                    <li><a href=""> <i class='bx bxl-facebook-circle'></i> </a></li>
+                    <li><a href=""> <i class='bx bxl-instagram-alt'></i> </a></li>
+                    <li><a href=""> <i class='bx bxl-twitter'></i> </a></li>
+                    <li><a href="logout.php"> <i class='bx bx-power-off power-btn'></i> </a></li>
+                </ul>
+            </div>
+
+            <div class="section-01">
+                <div class="section-01-inner">
+                    <div class="card-wrapper">
+
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="item-img">
+                                    <div class="item-img-inner img-001">
+                                        
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-box-inner">
+                                        <h3>Price : 250 Rs</h3>
+                                        <div class="btn-cats">
+                                            <button>Buy Now</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="item-img">
+                                    <div class="item-img-inner img-002">
+                                        
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-box-inner">
+                                        <h3>Price : 250 Rs</h3>
+                                        <div class="btn-cats">
+                                            <button>Buy Now</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="item-img">
+                                    <div class="item-img-inner img-003">
+                                        
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-box-inner">
+                                        <h3>Price : 250 Rs</h3>
+                                        <div class="btn-cats">
+                                            <button>Buy Now</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="item-img">
+                                    <div class="item-img-inner img-004">
+                                        
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-box-inner">
+                                        <h3>Price : 250 Rs</h3>
+                                        <div class="btn-cats">
+                                            <button>Buy Now</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="item-img">
+                                    <div class="item-img-inner img-005">
+                                        
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-box-inner">
+                                        <h3>Price : 250 Rs</h3>
+                                        <div class="btn-cats">
+                                            <button>Buy Now</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="item-img">
+                                    <div class="item-img-inner img-006">
+                                        
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-box-inner">
+                                        <h3>Price : 250 Rs</h3>
+                                        <div class="btn-cats">
+                                            <button>Buy Now</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="item-img">
+                                    <div class="item-img-inner img-007">
+                                        
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-box-inner">
+                                        <h3>Price : 250 Rs</h3>
+                                        <div class="btn-cats">
+                                            <button>Buy Now</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-container">
+                                <div class="item-img">
+                                    <div class="item-img-inner img-008">
+                                        
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <div class="item-box-inner">
+                                        <h3>Price : 250 Rs</h3>
+                                        <div class="btn-cats">
+                                            <button>Buy Now</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="section-03">
+                <div class="section-03-inner">
+                    <div class="detail-box">
+                        
+                    </div>
+                    
+                    <div class="color-box">
+                        <!-- table of shot -->
+
+                        <table class="table-footer">
+                            <tr>
+                                <th>About US</th>
+                                <th>Contact</th>
+                                <th>Accocunt</th>
+                            </tr>
+                            <tr>
+                                <td><a href="index.html">Home</a></td>
+                                <td> <a href=""> <i class='bx bxs-phone-call'></i> &nbsp; +94 12345667 </a> </td>
+                                <td><a href="login.html">Login</a> </td>
+                            </tr>
+                            <tr>
+                                <td><a href="shop.html">Shop</a></td>
+                                <td> <a href=""> <i class='bx bxs-envelope' style='color:#ffffff'></i> &nbsp;
+                                        it217146@gmail.com</a></td>
+                                <td><a href="account.html">Create Account</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">Portfolio</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+
+                        <div class="footer-tags">
+                            <h2>All Rights Revered </h2>
+                            <h3>Created by S M</h3>
+                            <h3>@2022</h3>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

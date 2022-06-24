@@ -1,0 +1,4 @@
+.power-btn:hover {
+    text-shadow: 0 0 5px #36ff00, 0 0 10px #36ff00, 0 0 15px #36ff00, 0 0 20px #36ff00, 0 0 30px #FF36FF00, 0 0 40px #FF36FF00, 0 0 55px #FF36FF00, 0 0 75px #FF36FF00, 2px 2px 2px rgba(255,0,0,0);
+    color: #ffffff;
+}

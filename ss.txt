@@ -1,0 +1,8 @@
+INSERT INTO `users` (`email`, `fullname`, `password`) VALUES ('seneth@gmail.com', 'senethmendis', 'seneth');
+
+$connection = mysqli_connect("localhost", "root", "", "websitestudio");
+
+
+                                        
+
+// $sqlQuary = "SELECT * FROM `users` WHERE `email`='" . $email . "' AND `password`='" . $password . "';";

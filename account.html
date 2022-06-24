@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="icon" href="Assets/icons/icon.png">
+
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+
+    <!-- font icons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <link rel="stylesheet" href="CSS/account.css">
+</head>
+
+<body>
+<div class="main-outer">
+    <div class="main-inner">
+
+        <div class="navigation-bar">
+            <ul class="nav-tabs">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+
+            <ul class="social-tab-icons">
+                <li><a href=""> <i class='bx bxl-facebook-circle'></i> </a></li>
+                <li><a href=""> <i class='bx bxl-instagram-alt'></i> </a></li>
+                <li><a href=""> <i class='bx bxl-twitter'></i> </a></li>
+                <li><a href="logout.php"> <i class='bx bx-power-off'></i> </a></li>
+            </ul>
+        </div>
+
+        <div class="section-01">
+            <div class="section-01-inner">
+                <div class="bg-img">
+                    <div class="form-container">
+                        <div class="picture-container"></div>
+                        <div class="form-details">
+                            <!-- form and all the details -->
+
+                            <form action="account.html" class="fill-up" method="POST">
+                                <div class="set sets">
+                                    <label for="email">E-mail</label>
+                                    <input type="text" name="txtemail" id="email" required>
+                                </div>
+                                <div class="set sets">
+                                    <label for="fullname">Full Name</label>
+                                    <input type="text" name="txtfullname" id="fullname">
+                                </div>
+                                <div class="set sets">
+                                    <label for="txtusername">User Name</label>
+                                    <input type="text" name="txtusername" id="username">
+                                </div>
+                                <div class="set sets">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="txtpassword" id="password" required>
+                                </div>
+
+                                <div class="set sets">
+                                    <label for="repassword">Confirm Password</label>
+                                    <input type="password" name="repassword" id="repassword" required>
+                                </div>
+
+                                <div class="set">
+                                    <input type="checkbox" name="agree" id="agree">
+                                    <label for="agree"> Send Product updates <br>
+                                        to the email, click on the <br> checkbox.
+                                    </label>
+                                </div>
+
+
+                                <button type="submit" class="submit-btn" name="btn-submit"> Create Account</button>
+
+                            </form>
+
+                            <?php
+                            if (isset($_POST["btn-submit"])) {
+
+                                $email = $_POST["txtemail"];
+                                $fullname = $_POST["txtfullname"];
+                                $password = $_POST["txtpassword"];
+                                $username = $_POST["txtusername"];
+                                $repassword = $_POST["repassword"];
+
+                                if ((!empty($email)) && (!empty($fullname)) && (!empty($password)) && ($password == $repassword)) {
+
+                                    $connection = mysqli_connect("localhost", "root", "", "beautysaloon");
+
+                                    if (!$connection) {
+                                        die("Connection issues to server DB");
+                                    }
+
+                                    $sqlQuary = "INSERT INTO `users`(`username`, `fullname`, `email`, `password`) VALUES (`" . $username . "`,`" . $fullname . "`,`" . $email . "`,`" . $password . "`)";
+                                    mysqli_query($connection, $sqlQuary);
+                                    header('location:login.php');
+
+                                } else {
+                                    echo "fill up the fields";
+                                }
+                            }
+                            ?>
+
+
+                            <h4 style="color: #ffffff; font-family: 'Padauk', sans-serif;"> Have an account ? &nbsp;
+                                <br><a href="login.html" style="color:rgb(84, 235, 164); text-decoration: none;"> <i
+                                            class='bx bxs-chevron-right' style='color:rgb(84, 235, 164)'></i> Login <i
+                                            class='bx bxs-chevron-left' style='color:rgb(84, 235, 164)'></i> </a></h4>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- ------------------------------------------------------------- -->
+        <div class="section-03">
+            <div class="section-03-inner">
+                <div class="detail-box">
+                    <div class="sides left-side">
+                        <h1 class="footer-styles">Ready To Get Start ?</h1>
+                        <h1 class="footer-styles">Talk To Us Today</h1>
+                    </div>
+                    <div class="sides right-side">
+                        <button> Get Started</button>
+                    </div>
+                </div>
+                <div class="white-boc"></div>
+                <div class="color-box">
+                    <!-- table of shot -->
+
+                    <table class="table-footer">
+                        <tr>
+                            <th>About US</th>
+                            <th>Contact</th>
+                            <th>Accocunt</th>
+                        </tr>
+                        <tr>
+                            <td><a href="index.html">Home</a></td>
+                            <td><a href=""> <i class='bx bxs-phone-call'></i> &nbsp; +94 12345667 </a></td>
+                            <td><a href="login.html">Login</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">Shop</a></td>
+                            <td><a href=""> <i class='bx bxs-envelope' style='color:#ffffff'></i> &nbsp;
+                                    it217146@gmail.com</a></td>
+                            <td><a href="account.html">Create Account</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">Portfolio</a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+
+                    <div class="footer-tags">
+                        <h2>All Rights Revered </h2>
+                        <h3>Created by S M</h3>
+                        <h3>@2022</h3>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+
+</html>

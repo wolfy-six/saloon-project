@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="Assets/icons/icon.png">
+
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <link rel="stylesheet" href="CSS/powerbtn.css">
+
+    <!-- font icons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- js link -->
+    <script type="text/javascript" src="JS/index.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" href="CSS/contact.css">
+
+</head>
+
+<body>
+    <div class="main-outer">
+
+
+        <div class="main-inner">
+
+
+            <div class="navigation-bar">
+
+
+                <ul class="nav-tabs">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="login.html">Login</a></li>
+
+                </ul>
+
+                <ul class="social-tab-icons">
+                    <li><a href=""> <i class='bx bxl-facebook-circle'></i> </a></li>
+                    <li><a href=""> <i class='bx bxl-instagram-alt'></i> </a></li>
+                    <li><a href=""> <i class='bx bxl-twitter'></i> </a></li>
+                </ul>
+            </div>
+
+            <div class="section-01">
+                <div class="section-01-inner">
+                    <div class="contact-box-map">
+                        <div class="inner-container-01">
+                            <h1 class="get-in">Get In Touch</h1>
+                            <h3 class="get-in">call or email us regarding</h3>
+                            <h3 class="get-in">quession or issues</h3>
+
+                            <form action="contact.html" class="form-get-in" method="POST">
+
+                                <input type="text" placeholder="Full Name" name="txtfullname" id="fullname">
+
+                                <input type="email" placeholder="Example@email.com" name="txtemail" id="email">
+
+                                <textarea name="txtmassage" id="" placeholder="Write Message" cols="30" rows="10"></textarea>
+
+                                <?php
+
+                                if (isset($_POST["btnsubmit"])) {
+
+                                    $fullname = $_POST["txtfullname"];
+                                    $email = $_POST["txtemail"];
+                                    $message = $_POST["txtmassage"];
+
+                                    $connection = mysqli_connect("localhost", "root", "", "beautysaloon");
+
+                                    if (!$connection) {
+                                        die("Connection issues to server DB");
+                                    }
+
+                                    if (!empty($fullname) && (!empty($email)) && ($message)) {
+                                        $sqlQuary = "INSERT INTO `contact_info` (`fullname`, `email`, `message`) VALUES ('" . $fullname . "','" . $email . "','" . $message . "')";
+                                        mysqli_query($connection, $sqlQuary);
+
+
+                                        // $msg = $message;
+
+                                        // //  longer than 70 characters
+                                        // $msg = wordwrap($msg, 400);
+
+                                        // // send email
+                                        // mail("seneth.mendis@gmail.com", "More Infor", $msg);
+
+                                    } else {
+                                        echo "";
+                                    }
+                                }
+
+
+
+                                ?>
+
+
+
+                                <button type="submit" name="btnsubmit" id="btnsubmit">Submit</button>
+                            </form>
+
+
+                        </div>
+                        <div class="inner-container-02">
+                            <div class="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1401.9376418732093!2d80.02030590934486!3d6.357992644809166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae22bd21df55e6d%3A0x4d5d71f39f68b31a!2zNsKwMjEnMzEuNiJOIDgwwrAwMScwOC40IkU!5e0!3m2!1sen!2ssg!4v1654777942617!5m2!1sen!2ssg" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="section-03">
+                <div class="section-03-inner">
+                    <div class="detail-box">
+                        <div class="sides left-side">
+                            <h1 class="footer-styles">Ready To Get Start ?</h1>
+                            <h1 class="footer-styles">Talk To Us Today</h1>
+                        </div>
+                        <div class="sides right-side">
+                            <a href="login.html"><button> Get Started</button></a>
+
+                        </div>
+                    </div>
+                    <div class="white-boc"></div>
+                    <div class="color-box">
+                        <!-- table of shot -->
+
+                        <table class="table-footer">
+                            <tr>
+                                <th>About US</th>
+                                <th>Contact</th>
+                                <th>Accocunt</th>
+                            </tr>
+                            <tr>
+                                <td><a href="index.html">Home</a></td>
+                                <td><a href=""> <i class='bx bxs-phone-call'></i> &nbsp; +94 12345667 </a></td>
+                                <td><a href="login.html">Login</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">Shop</a></td>
+                                <td><a href=""> <i class='bx bxs-envelope' style='color:#ffffff'></i> &nbsp;
+                                        it217146@gmail.com</a></td>
+                                <td><a href="account.html">Create Account</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">Portfolio</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+
+                        <div class="footer-tags">
+                            <h2>All Rights Revered </h2>
+                            <h3>Created by S M</h3>
+                            <h3>@2022</h3>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

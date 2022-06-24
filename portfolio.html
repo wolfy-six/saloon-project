@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="Assets/icons/icon.png">
+
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- h2 tag font that userd -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+
+
+    <!-- font icons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="JS/portfolio.js"></script>
+
+    <link rel="stylesheet" href="CSS/portfolio.css">
+    <link rel="stylesheet" href="CSS/bigImg.css">
+</head>
+
+<body onload="hideonstart()">
+    <!-- hideonstart() -->
+    <div class="main-outer">
+        <div class="main-inner">
+
+            <div class="navigation-bar">
+                <ul class="nav-tabs">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+
+                <ul class="social-tab-icons">
+                    <li><a href=""> <i class='bx bxl-facebook-circle'></i> </a></li>
+                    <li><a href=""> <i class='bx bxl-instagram-alt'></i> </a></li>
+                    <li><a href=""> <i class='bx bxl-twitter'></i> </a></li>
+                </ul>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+            <div class="section-01">
+                <div class="section-01-inner">
+                    <div class="video-hero">
+                        <video autoplay muted loop class="video-bg">
+                            <source src="Assets/Videos/Portfolio.mp4" type="video/mp4">
+                        </video>
+
+                        <h1>Teresha Nilmini</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Repellendus consequatur harum
+                            dolorem minus, iure ducimus placeat ad amet cumque, atque recusandae saepe quis <br> animi
+                            qui
+                            porro libero magni! Illum, necessitatibus?
+                        </p>
+
+                        <button class="btn-explore" id="show" onclick="showhideSection()">Explore</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-02">
+                <div class="section-02-inner">
+
+                    <div class="full-img" id="fullImgBox">
+                            <img src="" id="fullImg">
+                            <span onclick="closeFullImg()"> <i class='bx bx-x' style='color:#ffffff; font-size: 3rem;'></i> </span>
+                        </div>
+
+                    <div class="box">
+
+                        <div class="dream">
+                            <img src="Assets/Portfolio/1.jpg" onclick="openFullImg(this.src)">
+                            <img src="Assets/Portfolio/2.jpg" onclick="openFullImg(this.src)">
+                            <img src="Assets/Portfolio/3.jpg" onclick="openFullImg(this.src)">
+                            <img src="Assets/Portfolio/4.jpg" onclick="openFullImg(this.src)">
+                            <img src="Assets/Portfolio/5.jpg" onclick="openFullImg(this.src)">
+
+                        </div>
+
+                        <div class="dream">
+                            <img src="Assets/Portfolio/6.jpg" onclick="openFullImg(this.src)">
+                            <img src="Assets/Portfolio/7.jpg" onclick="openFullImg(this.src)">
+                            <img src="Assets/Portfolio/8.jpg" onclick="openFullImg(this.src)">
+                            <img src="Assets/Portfolio/9.jpg" onclick="openFullImg(this.src)">
+                            <img src="Assets/Portfolio/10.jpg" onclick="openFullImg(this.src)">
+
+                        </div>
+
+                        <div class="dream">
+                            <img src="Assets/Portfolio/11.jpg" onclick="openFullImg(this.src)">
+                            <img src="Assets/Portfolio/12.jpg" onclick="openFullImg(this.src)">
+                            <img src="Assets/Portfolio/13.jpg" onclick="openFullImg(this.src)">
+                            <img src="Assets/Portfolio/14.jpg" onclick="openFullImg(this.src)">
+                            <img src="Assets/Portfolio/15.jpg" onclick="openFullImg(this.src)">
+
+                        </div>
+                    </div>
+
+                    <!-- for the big picture mode -->
+
+                    <script>
+                        var fullImgBox = document.getElementById("fullImgBox")
+                        var fullImg = document.getElementById("fullImg")
+    
+                        function openFullImg(pic){
+                            fullImgBox .style.display = "flex";
+                            fullImg.src = pic;
+                        }
+    
+                        function closeFullImg(){
+                            fullImgBox .style.display = "none";
+                        }
+                        
+    
+                    </script>
+
+                </div>
+
+            </div>
+
+            <!-- ------------------------------------------------------------- -->
+            <div class="section-03">
+                <div class="section-03-inner">
+
+                    <div class="color-box">
+                        <!-- table of shot -->
+
+                        <table class="table-footer">
+                            <tr>
+                                <th>About US</th>
+                                <th>Contact</th>
+                                <th>Accocunt</th>
+                            </tr>
+                            <tr>
+                                <td><a href="index.html">Home</a></td>
+                                <td> <a href=""> <i class='bx bxs-phone-call'></i> &nbsp; +94 12345667 </a> </td>
+                                <td><a href="login.html">Login</a> </td>
+                            </tr>
+                            <tr>
+                                <td><a href="">Shop</a></td>
+                                <td> <a href=""> <i class='bx bxs-envelope' style='color:#ffffff'></i> &nbsp;
+                                        it217146@gmail.com</a></td>
+                                <td><a href="account.html">Create Account</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">Portfolio</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
